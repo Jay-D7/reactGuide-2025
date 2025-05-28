@@ -19,11 +19,17 @@ const content = [
     'Next.js (Fullstack framework)',
     'React Native (build native mobile apps with React)',
   ],
+  [
+    'React Router (for routing in React apps)',
+    'Redux (state management)',
+    'React Query (data fetching)',
+    'Styled Components (CSS-in-JS library)',
+  ],
 ];
 
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
-
+  console.log('App component rendered');
   return (
     <div>
       <header>
@@ -51,6 +57,12 @@ export default function App() {
           <button
             className={activeContentIndex === 2 ? 'active' : ''}
             onClick={() => setActiveContentIndex(2)}
+          >
+            Related Resources
+          </button>
+          <button
+            className={activeContentIndex === 3 ? 'active' : ''}
+            onClick={() => setActiveContentIndex(3)}
           >
             Related Resources
           </button>
