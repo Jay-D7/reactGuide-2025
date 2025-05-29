@@ -20,15 +20,6 @@ const userMessage = `Hello Jacob!!! It's a great day on horizon!`;
 console.log(userMessage);
 console.log(userMessage);
 
-function createGreeting(userName, message = 'Hello!') {
-  console.log(userName);
-  console.log(message);
-  return `Hi, I am ${userName}. ${message}`;
-}
-
-const greeting1 = createGreeting('Jacob');
-console.log(greeting1);
-
 // 3. Revisiting Operators
 const a = 10;
 const b = 5 + 5;
@@ -37,3 +28,11 @@ if (a === b) {
 }
 
 // 4. Functions
+function createGreeting(userName, message = 'Hello!') {
+  console.log(userName);
+  console.log(message);
+  return `Hi, I am ${userName}. ${message}`;
+}
+
+const greeting1 = createGreeting('Jacob');
+console.log(greeting1);
