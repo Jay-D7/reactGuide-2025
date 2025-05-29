@@ -28,8 +28,8 @@ const content = [
 ];
 
 export default function App() {
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
-  console.log('App component rendered');
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
     <div>
       <header>
@@ -43,33 +43,33 @@ export default function App() {
       <div id="tabs">
         <menu>
           <button
-            className={activeContentIndex === 0 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(0)}
+            className={activeTab === 0 ? 'active' : ''}
+            onClick={() => setActiveTab(0)}
           >
             Why React?
           </button>
           <button
-            className={activeContentIndex === 1 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(1)}
+            className={activeTab === 1 ? 'active' : ''}
+            onClick={() => setActiveTab(1)}
           >
             Core Features
           </button>
           <button
-            className={activeContentIndex === 2 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(2)}
+            className={activeTab === 2 ? 'active' : ''}
+            onClick={() => setActiveTab(2)}
           >
             Related Resources
           </button>
           <button
-            className={activeContentIndex === 3 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(3)}
+            className={activeTab === 3 ? 'active' : ''}
+            onClick={() => setActiveTab(3)}
           >
             Related Resources
           </button>
         </menu>
         <div id="tab-content">
           <ul>
-            {content[activeContentIndex].map((item) => (
+            {content[activeTab].map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
