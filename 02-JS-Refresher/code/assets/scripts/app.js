@@ -50,7 +50,7 @@ const greeting2 = createGreeting('Manuel', "Hello, what's up?");
 console.log(greeting2);
 
 //
-// Coding Exercise 1: Exercise: Working with Functions
+// Coding Exercise 1: Working with Functions
 const combine = (a, b, c) => {
   let value = (a * b) / c;
   return console.log(value);
@@ -99,3 +99,37 @@ class User {
 const user1 = new User('Janice', 39);
 console.log(user1);
 user1.greet();
+
+//
+//  Arrays & Array Methods like map()
+// Technically arrays are also objects in JavaScript but they have some special methods
+const hobbies = ['Sports', 'Cooking', 'Reading'];
+console.log(hobbies[0]);
+
+// Push adds an item to the end of the array
+hobbies.push('Working');
+console.log(hobbies);
+
+// Find index of an item in the array
+const index = hobbies.findIndex((item) => item === 'Cooking'); // Using arrow function syntax
+// const index2 = hobbies.findIndex((item) => { // Using function expression syntax
+//   return item === 'Reading';
+// });
+console.log(index);
+
+// Map creates a new array by applying a function to each item in the original array
+const editedHobbies = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbies);
+
+// pop removes the last item from the array
+hobbies.pop();
+console.log(hobbies);
+
+// Exercise: Arrays & Array Methods
+const numberArray = [1, 2, 3];
+
+function transformToObjects(numberArray) {
+  return numberArray.map((item) => ({ val: item }));
+}
+
+console.log(transformToObjects(numberArray));
