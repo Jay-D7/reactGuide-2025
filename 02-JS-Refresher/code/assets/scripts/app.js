@@ -131,5 +131,25 @@ const numberArray = [1, 2, 3];
 function transformToObjects(numberArray) {
   return numberArray.map((item) => ({ val: item }));
 }
-
 console.log(transformToObjects(numberArray));
+
+//
+// Destructuring Arrays & Objects
+
+// Old way of extracting values from an array
+// const userNameData = ['Jacob', 'Smith'];
+// const firstName = userNameData[0];
+// const lastName = userNameData[1];
+
+// New way of extracting values from an array using destructuring
+const [firstName, lastName] = ['Jacob', 'Smith'];
+console.log(firstName);
+console.log(lastName);
+
+const { name: userName, age } = {
+  name: 'Jacob',
+  age: 31,
+};
+
+console.log(userName);
+console.log(age);
