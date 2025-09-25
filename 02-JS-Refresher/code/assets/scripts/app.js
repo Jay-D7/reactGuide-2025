@@ -309,6 +309,19 @@ setTimeout(() => {
   greeter(() => console.log('Hello from greeter!'));
 }, 4500);
 
+// Defining Functions inside other functions
+console.log('\nDefining Functions inside other functions:');
+
+function outerInitFunction() {
+  function innerFunction() {
+    console.log('Hello from inner function!');
+  }
+
+  innerFunction();
+}
+
+outerInitFunction();
+
 // Calculating the difference between two dates in days
 console.log('calculateDaysBetweenDates function:');
 function calculateDaysBetweenDates(begin, end) {
