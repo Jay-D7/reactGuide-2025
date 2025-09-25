@@ -278,6 +278,37 @@ list.append(newListItem);
 //
 // list.remove();
 
+// Using Functions as Values
+console.log('\nUsing Functions as Values:');
+
+function handleTimeout() {
+  console.log('Time is up 2sec!');
+}
+
+const handleTimeout2 = () => {
+  console.log('Time is up with arrow function!');
+};
+
+// handleTimeout();
+// handleTimeout2();
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 2500);
+
+// Using an anonymous function
+setTimeout(() => {
+  console.log('This will run after 4 seconds');
+}, 4000);
+
+function greeter(greetFn) {
+  greetFn();
+}
+
+setTimeout(() => {
+  // Using an arrow function as a callback
+  // nested callbacks - a callback function that calls another function with its own callback!
+  greeter(() => console.log('Hello from greeter!'));
+}, 4500);
+
 // Calculating the difference between two dates in days
 console.log('calculateDaysBetweenDates function:');
 function calculateDaysBetweenDates(begin, end) {
