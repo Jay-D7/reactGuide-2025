@@ -247,7 +247,38 @@ const extendedUser = {
 };
 
 console.log(extendedUser);
+
+// Revisiting Control Structures
+console.log('\nRevisiting Control Structures:');
+
+// const password = prompt('Please enter your password:');
+
+// if (password === 'Hello') {
+//   console.log('Correct Password!🎉');
+// } else if (password === 'hello') {
+//   console.log('Almost correct, but case sensitive!🤦🏼‍♂️');
+// } else {
+//   console.log('Wrong Password!');
+// }
+
+const hobbiesControl = ['Sports', 'Cooking'];
+
+for (const hobby of hobbiesControl) {
+  console.log(hobby);
+}
+
+// Manipulating the DOM - not with React!
+console.log('\nManipulating the DOM - not with React!:');
+
+const list = document.querySelector('ul');
+
+const newListItem = document.createElement('li');
+newListItem.textContent = 'Newly added list item';
+list.append(newListItem);
 //
+// list.remove();
+
+// Calculating the difference between two dates in days
 console.log('calculateDaysBetweenDates function:');
 function calculateDaysBetweenDates(begin, end) {
   const startDate = new Date(begin);
@@ -260,6 +291,9 @@ const days = calculateDaysBetweenDates('2023-01-01', '2023-01-31');
 // console.log(`Example output calculation: ` + days + ` days`);
 console.log(`Example output calculation: ${days} days`);
 
+// Dom Manipulation
+console.log('\nDom Manipulation: highlightImagesWithAlt');
+// console.log(document);
 // write a function to
 // find all images without alternate text
 // and give them a red border
