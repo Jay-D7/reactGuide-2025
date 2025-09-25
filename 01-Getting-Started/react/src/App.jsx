@@ -64,7 +64,7 @@ export default function App() {
             className={activeTab === 3 ? 'active' : ''}
             onClick={() => setActiveTab(3)}
           >
-            Related Resources
+            Popular Libraries
           </button>
         </menu>
         <div id="tab-content">
