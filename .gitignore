@@ -31,4 +31,5 @@ package-lock.json
 # !03-react-basics-working-with-components/code/01-starting-setup
 
 /02-JS-Refresher/finished
-/03-react-basics-working-with-components
+/03-React-Essentials/01-starting-project
+/03-React-Essentials/code
