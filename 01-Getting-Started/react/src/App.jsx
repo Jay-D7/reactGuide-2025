@@ -19,10 +19,16 @@ const content = [
     'Next.js (Fullstack framework)',
     'React Native (build native mobile apps with React)',
   ],
+  [
+    'React Router (for routing in React apps)',
+    'Redux (state management)',
+    'React Query (data fetching)',
+    'Styled Components (CSS-in-JS library)',
+  ],
 ];
 
 export default function App() {
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div>
@@ -37,27 +43,33 @@ export default function App() {
       <div id="tabs">
         <menu>
           <button
-            className={activeContentIndex === 0 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(0)}
+            className={activeTab === 0 ? 'active' : ''}
+            onClick={() => setActiveTab(0)}
           >
             Why React?
           </button>
           <button
-            className={activeContentIndex === 1 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(1)}
+            className={activeTab === 1 ? 'active' : ''}
+            onClick={() => setActiveTab(1)}
           >
             Core Features
           </button>
           <button
-            className={activeContentIndex === 2 ? 'active' : ''}
-            onClick={() => setActiveContentIndex(2)}
+            className={activeTab === 2 ? 'active' : ''}
+            onClick={() => setActiveTab(2)}
           >
             Related Resources
+          </button>
+          <button
+            className={activeTab === 3 ? 'active' : ''}
+            onClick={() => setActiveTab(3)}
+          >
+            Popular Libraries
           </button>
         </menu>
         <div id="tab-content">
           <ul>
-            {content[activeContentIndex].map((item) => (
+            {content[activeTab].map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
