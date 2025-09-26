@@ -322,6 +322,20 @@ function outerInitFunction() {
 
 outerInitFunction();
 
+// Reference vs Primitive Values
+console.log('\nReference vs Primitive Values:');
+
+let userMessage1 = 'Hello World';
+// userMessage = 'Hello there!';
+
+userMessage1 = userMessage1.concat(' How are you?');
+console.log(userMessage1);
+
+const hobbies1 = ['Sports', 'Cooking'];
+// hobbies1 = [];
+hobbies1.push('Reading');
+console.log(hobbies1);
+
 // Calculating the difference between two dates in days
 console.log('calculateDaysBetweenDates function:');
 function calculateDaysBetweenDates(begin, end) {
